@@ -13,3 +13,7 @@ RUN apt-get update && apt-get install -y apt-utils \
  && rm -rf /var/lib/apt/lists/*
 
 COPY jupyter_notebook_config.py $JUPYTER_CONFIG_DIR
+
+EXPOSE 8888
+
+CMD ["jupyter", "notebook"]
